@@ -10,7 +10,7 @@ class Task extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['user_id', 'title', 'description', 'status', 'priority', 'is_active', 'due_data'];
+    protected $fillable = ['user_id', 'title', 'description', 'status', 'priority', 'is_active', 'due_date'];
 
     #[Override]
     protected function casts()
