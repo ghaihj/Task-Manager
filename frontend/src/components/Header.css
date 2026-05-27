@@ -1,0 +1,162 @@
+/* Header.css */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a, 
+.logout-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:hover,
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Active link styling */
+nav ul li a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* User info styling */
+.user-info {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.user-name .icon {
+  font-size: 1rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav ul li a,
+  .logout-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .icon {
+    font-size: 1rem;
+  }
+  
+  .logo span {
+    font-size: 1.2rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+  
+  .user-info {
+    margin-left: 0;
+    padding: 0;
+    border-left: none;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+  
+  nav ul li a span:last-child,
+  .logout-btn span:last-child,
+  .user-name span:last-child {
+    display: none; /* Hide text on very small screens, show only icons */
+  }
+  
+  nav ul li a,
+  .logout-btn {
+    padding: 0.5rem;
+  }
+  
+  .icon {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  
+  .user-name {
+    padding: 0.5rem;
+  }
+}
